@@ -21,5 +21,12 @@
         <p><a href="session_login.php">session_login</a></p>
     <?php endif; ?>
 
+    <?php if(isset($_SESSION['login_at'])): ?>
+        <p>Время входа: <?= $_SESSION['login_at'] ?> </p>
+        <p><?= time() - $_SESSION['login_at'] ?> секунд назад.</p>
+    <?php else: ?>
+        <p>Вход не произведен</p>
+    <?php endif; ?>
+
 </body>
 </html>
